@@ -1,12 +1,4 @@
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
 import { genDiff } from '../src/gendiff.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const file1Path = join(__dirname, '../__fixtures__/file1.json');
-const file2Path = join(__dirname, '../__fixtures__/file2.json');
 
 test('genDiff outputs correct diff for flat objects', () => {
   const obj1 = { a: 1, b: 2, c: 3 };
