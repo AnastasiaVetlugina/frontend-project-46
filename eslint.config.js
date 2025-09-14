@@ -6,18 +6,18 @@ export default [
   js.configs.recommended,
   {
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
     },
     rules: {
       'no-console': 'off',
       'quotes': ['error', 'single'],
-      'semi': ['error', 'never'],
       '@stylistic/semi': ['error', 'never'],
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/eol-last': 'error',
       '@stylistic/brace-style': ['error', '1tbs'],
-      '@stylistic/arrow-parens': ['error', 'as-needed']
-    }
+      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+    },
   },
   {
     files: ['**/*.{js,mjs,cjs}'],

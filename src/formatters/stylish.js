@@ -17,7 +17,7 @@ const formatValue = (values, depth) => {
   return `${values}`
 }
 
-const renderStylish = content => {
+const renderStylish = (content) => {
   const iter = (node, depth) => {
     const indent = makeIndent(depth)
 
@@ -47,13 +47,13 @@ const renderStylish = content => {
         ]
       }
       default: {
-        const innerTree = node.children.flatMap(child => iter(child, depth + 1)).join('\n')
+        const innerTree = node.children.flatMap((child) => iter(child, depth + 1)).join('\n')
         return `${indent}${node.key}: {\n${innerTree}\n${indent}}`
       }
     }
   }
 
-  const tree = content.flatMap(node => iter(node, 1)).join('\n')
+  const tree = content.flatMap((node) => iter(node, 1)).join('\n')
   return `{\n${tree}\n${makeIndent()}}`
 }
 
