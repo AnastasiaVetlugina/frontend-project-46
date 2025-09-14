@@ -6,7 +6,7 @@ import gendiff from '../src/index.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const fixturesPath = path.join(__dirname, '__fixtures__');
+const fixturesPath = path.join(__dirname, '..', '__fixtures__');
 
 const resultStylish = fs.readFileSync(path.join(fixturesPath, 'resultStylish.txt'), 'utf-8');
 const resultPlain = fs.readFileSync(path.join(fixturesPath, 'resultPlain.txt'), 'utf-8');
