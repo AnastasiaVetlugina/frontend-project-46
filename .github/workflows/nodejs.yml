@@ -1,0 +1,27 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - name: Use Node.js
+      uses: actions/setup-node@v5
+      with:
+        node-version: 18
+
+    - run: npm ci
+    - run: npm run lint
+    - run: npm test -- --coverage
+
+    - name: SonarQube Scan
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: sonar-scanner
