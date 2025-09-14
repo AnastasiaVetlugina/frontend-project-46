@@ -8,16 +8,16 @@
       "key5": "value5"
     },
     "setting6": {
-      "key": "value",
-      "ops": "vops",
       "doge": {
         "wow": "so much"
-      }
+      },
+      "key": "value",
+      "ops": "vops"
     }
   },
   "group1": {
-    "foo": "bar",
     "baz": "bars",
+    "foo": "bar",
     "nest": "str"
   },
   "group3": {
