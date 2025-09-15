@@ -1,7 +1,7 @@
-const convertAstToObject = (ast) => {
+const convertAstToObject = ast => {
   const result = {}
 
-  ast.forEach((node) => {
+  ast.forEach(node => {
     if (node.state === 'nested' && node.children) {
       result[node.key] = convertAstToObject(node.children)
     } else if (node.state === 'added' || node.state === 'unchanged') {
@@ -14,7 +14,7 @@ const convertAstToObject = (ast) => {
   return result
 }
 
-const json = (tree) => {
+const json = tree => {
   const mergedObject = convertAstToObject(tree)
   return JSON.stringify(mergedObject, null, 2)
 }

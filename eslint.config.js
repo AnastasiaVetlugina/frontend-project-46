@@ -15,7 +15,7 @@ export default [
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/eol-last': 'error',
       '@stylistic/brace-style': ['error', '1tbs'],
-      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/arrow-parens': ['error', 'as-needed'],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
     },
   },

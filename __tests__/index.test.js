@@ -16,7 +16,7 @@ describe('get different from two files', () => {
   test.each([
     ['yml'],
     ['json'],
-  ])('files format - %p', (extension) => {
+  ])('files format - %p', extension => {
     const fileOneFullPath = path.join(fixturesPath, `file1.${extension}`)
     const fileTwoFullPath = path.join(fixturesPath, `file2.${extension}`)
 

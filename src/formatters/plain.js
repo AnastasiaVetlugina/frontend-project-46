@@ -1,4 +1,4 @@
-const formatValue = (value) => {
+const formatValue = value => {
   if (value == null) {
     return String(null)
   }
@@ -11,7 +11,7 @@ const formatValue = (value) => {
   return value
 }
 
-const renderPlain = (content) => {
+const renderPlain = content => {
   const iter = (node, ancestry) => {
     const nestedPath = [...ancestry, node.key]
     const path = nestedPath.join('.')
@@ -27,10 +27,10 @@ const renderPlain = (content) => {
     if (node.state === 'unchanged') {
       return []
     }
-    return node.children.flatMap((children) => iter(children, nestedPath))
+    return node.children.flatMap(children => iter(children, nestedPath))
   }
   return content
-    .flatMap((node) => iter(node, []))
+    .flatMap(node => iter(node, []))
     .join('\n')
 }
 
