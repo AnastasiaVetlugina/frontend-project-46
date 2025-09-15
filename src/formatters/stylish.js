@@ -17,7 +17,7 @@ const formatValue = (values, depth) => {
   return `${values}`
 }
 
-const renderStylish = content => {
+const renderStylish = (content) => {
   const iter = (node, depth) => {
     const indent = makeIndent(depth)
 
